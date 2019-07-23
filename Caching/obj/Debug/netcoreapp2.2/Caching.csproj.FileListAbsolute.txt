@@ -39,3 +39,7 @@ C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Views\DistDrugs
 C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Views\MemDrugs\Details.g.cshtml.cs
 C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Views\MemDrugs\Edit.g.cshtml.cs
 C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Views\MemDrugs\Index.g.cshtml.cs
+C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\About1.g.cshtml.cs
+C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\About2.g.cshtml.cs
+C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\About3.g.cshtml.cs
+C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\DotNet.g.cshtml.cs

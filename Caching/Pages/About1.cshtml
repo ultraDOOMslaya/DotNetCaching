@@ -1,0 +1,24 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "What is a Cache?";
+}
+<h1>@ViewData["Title"]</h1>
+
+<br />
+<br />
+<h3>Caches are temporary memory stores that allow us to access temporary data quickly.</h3>
+<br />
+<br />
+<h3>Data is stored similar to a dictionary in the form of key value pairings.</h3>
+<br />
+<br />
+<h3>Keys are typically the request or query string used to retrieve the data originally.</h3>
+<h4 style="text-emphasis-color:gainsboro">ex: {key: drug/13, value: "Viagra"}</h4>
+<br />
+<br />
+<h3>Cached key/value pairings typically have a set lifespan and are evicted once expired but several different eviction policies exist depending on the cache being used.</h3>
+<br />
+<br />
+<a class="btn" href="/About">Back</a>&nbsp;<a class="btn" href="/About2">Next</a>
+

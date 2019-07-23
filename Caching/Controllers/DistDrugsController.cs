@@ -46,7 +46,11 @@ namespace Caching.Controllers
 
                 drugs = await _context.Drugs.ToListAsync();
                 cachedDrugs = JsonConvert.SerializeObject(drugs);
-                await _cache.SetStringAsync(key, cachedDrugs);
+                var options = new DistributedCacheEntryOptions
+                {
+                    SlidingExpiration = TimeSpan.FromSeconds(200)
+                };
+                await _cache.SetStringAsync(key, cachedDrugs, options);
             }
             drugs = JsonConvert.DeserializeObject<List<Drug>>(cachedDrugs);
             await _cache.RefreshAsync(key);
@@ -66,7 +70,11 @@ namespace Caching.Controllers
                 Thread.Sleep(3000);
                 drug = await _context.Drugs.FindAsync(id);
                 cachedDrug = JsonConvert.SerializeObject(drug);
-                await _cache.SetStringAsync(key, cachedDrug);
+                var options = new DistributedCacheEntryOptions
+                {
+                    SlidingExpiration = TimeSpan.FromSeconds(200)
+                };
+                await _cache.SetStringAsync(key, cachedDrug, options);
             }
             drug = JsonConvert.DeserializeObject<Drug>(cachedDrug);
             await _cache.RefreshAsync(key);
@@ -93,7 +101,11 @@ namespace Caching.Controllers
 
                 drug = await _context.Drugs.FindAsync(id);
                 cachedDrug = JsonConvert.SerializeObject(drug);
-                await _cache.SetStringAsync(key, cachedDrug);
+                var options = new DistributedCacheEntryOptions
+                {
+                    SlidingExpiration = TimeSpan.FromSeconds(200)
+                };
+                await _cache.SetStringAsync(key, cachedDrug, options);
             }
             drug = JsonConvert.DeserializeObject<Drug>(cachedDrug);
             await _cache.RefreshAsync(key);
@@ -114,7 +126,11 @@ namespace Caching.Controllers
 
                     _context.Update(drug);
                     await _context.SaveChangesAsync();
-                    await _cache.SetStringAsync(key, JsonConvert.SerializeObject(drug));
+                    var options = new DistributedCacheEntryOptions
+                    {
+                        SlidingExpiration = TimeSpan.FromSeconds(200)
+                    };
+                    await _cache.SetStringAsync(key, JsonConvert.SerializeObject(drug), options);
                     await _cache.RemoveAsync("drugs");
                 }
                 catch (DbUpdateConcurrencyException)
