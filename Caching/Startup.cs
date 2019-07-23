@@ -64,41 +64,12 @@ namespace Caching
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            //AddTestData(context);
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=DistDrug}/{action=Index}/{id?}");
             });
-        }
-
-        private static void AddTestData(ApiContext context)
-        {
-            var drug1 = new Models.Drug
-            {
-                Id = 1,
-                drugNdc = "000918370",
-                drugName = "Lipitor",
-                drugPrice = Decimal.Parse("87.99", System.Globalization.NumberStyles.Currency),
-                packSize = 30
-            };
-
-            context.Drugs.Add(drug1);
-
-            var drug2 = new Models.Drug
-            {
-                Id = 2,
-                drugNdc = "000914570",
-                drugName = "Viagra",
-                drugPrice = Decimal.Parse("34.99", System.Globalization.NumberStyles.Currency),
-                packSize = 10
-            };
-
-            context.Drugs.Add(drug2);
-
-            context.SaveChanges();
         }
     }
 }

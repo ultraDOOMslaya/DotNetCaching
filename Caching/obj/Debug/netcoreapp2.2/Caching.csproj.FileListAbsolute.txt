@@ -43,3 +43,5 @@ C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\About1.g.
 C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\About2.g.cshtml.cs
 C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\About3.g.cshtml.cs
 C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\DotNet.g.cshtml.cs
+C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\DotNet1.g.cshtml.cs
+C:\Projects\DotNet\Caching\Caching\obj\Debug\netcoreapp2.2\Razor\Pages\DotNet2.g.cshtml.cs
