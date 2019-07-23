@@ -1,0 +1,42 @@
+﻿@model Caching.Models.Drug
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Drug</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.drugNdc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.drugNdc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.drugName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.drugName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.drugPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.drugPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.packSize)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.packSize)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
